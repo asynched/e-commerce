@@ -1,4 +1,12 @@
-import { createContext, useContext, useMemo, useState } from 'react'
+import { liftContext } from '@lib/context'
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react'
 
 const Context = createContext()
 
@@ -22,14 +30,34 @@ const Provider = ({ children }) => {
   )
 }
 
-export default function ContextPage() {
+const LiftedContext = liftContext(Provider)
+
+export default LiftedContext(() => {
+  const { state } = useContext(Context)
+
+  useEffect(() => {
+    console.log(state)
+  }, [state])
+
   return (
-    <Provider>
+    <>
       <NameHeading />
+      <SomethingThatHasNothingToDoWithTheContextTree />
       <NameInput />
-    </Provider>
+    </>
   )
-}
+})
+
+const SomethingThatHasNothingToDoWithTheContextTree = React.memo(() => {
+  const renders = useRef(0)
+
+  return (
+    <>
+      <h2>Yay? I guess</h2>
+      <p>Rendered {renders.current++} times</p>
+    </>
+  )
+})
 
 function NameHeading() {
   const { state } = useContext(Context)
