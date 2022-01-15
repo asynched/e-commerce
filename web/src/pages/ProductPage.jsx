@@ -8,6 +8,7 @@ import BaseLayout from '@layouts/BaseLayout'
 import Rating from '@components/common/Rating'
 import Accordion from '@components/common/Accordion'
 import ProductSection from '@components/product/ProductSection'
+import RelatedProducts from '@components/product/RelatedProducts'
 
 export default function ProductPage() {
   const product = {
@@ -52,6 +53,12 @@ export default function ProductPage() {
             <div>{product.details.about}</div>
           </Accordion>
         </div>
+      </div>
+      <div className="my-8 px-8">
+        <h1 className="mb-4 text-3xl font-bold tracking-tighter">
+          Related products
+        </h1>
+        <RelatedProducts />
       </div>
     </BaseLayout>
   )
