@@ -11,7 +11,11 @@ export default function Footer() {
         </div>
         <div className="flex gap-4">
           <Link to="/">Home</Link>
-          <a target="_blank" href="https://github.com/asynched">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/asynched"
+          >
             GitHub
           </a>
           <Link to="/">Terms</Link>
@@ -22,6 +26,7 @@ export default function Footer() {
         <span className="text-gray-600">
           <a
             target="_blank"
+            rel="noreferrer"
             href="https://github.com/asynched"
             className="hover:underline"
           >
@@ -31,6 +36,7 @@ export default function Footer() {
         </span>
         <a
           target="_blank"
+          rel="noreferrer"
           href="https://vercel.com"
           className="hover:underline"
         >

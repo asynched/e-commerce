@@ -5,6 +5,7 @@ import Loader from '@components/common/Loader'
 
 const IndexPage = React.lazy(() => import('@pages/IndexPage'))
 const ContextPage = React.lazy(() => import('@pages/ContextPage'))
+const ProductPage = React.lazy(() => import('@pages/ProductPage'))
 
 export default function ApplicationRoutes() {
   return (
@@ -13,6 +14,7 @@ export default function ApplicationRoutes() {
         <Routes>
           <Route path="/" element={<IndexPage />} />
           <Route path="/context" element={<ContextPage />} />
+          <Route path="/product/:id" element={<ProductPage />} />
         </Routes>
       </BrowserRouter>
     </React.Suspense>

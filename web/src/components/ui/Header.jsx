@@ -21,7 +21,7 @@ export default function Header({ toggleCart }) {
         />
       </div>
       <div className="flex gap-4">
-        <button onClick={toggleCart}>
+        <button aria-label="Cart" onClick={toggleCart}>
           <ShoppingBagIcon className="h-6 w-6" />
         </button>
         <HeartIcon className="h-6 w-6" />

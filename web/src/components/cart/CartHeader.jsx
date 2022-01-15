@@ -9,7 +9,7 @@ export default function CartHeader({ toggle }) {
         <XIcon className="w-6 h-6" />
         <span>Close</span>
       </button>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-4">
         <ShoppingBagIcon className="w-6 h-6" />
         <HeartIcon className="w-6 h-6" />
         <AvatarBadge />
