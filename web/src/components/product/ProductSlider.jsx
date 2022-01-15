@@ -1,4 +1,4 @@
-import '@styles/marquee.css'
+import React from 'react'
 
 export default function ProductSlider() {
   const sampleData = [

@@ -1,9 +1,9 @@
 import React from 'react'
-import { ShoppingBagIcon, HeartIcon } from '@heroicons/react/outline'
 import { Link } from 'react-router-dom'
+import { ShoppingBagIcon, HeartIcon } from '@heroicons/react/outline'
 
+import AvatarBadge from '@components/common/AvatarBadge'
 import Logo from '@assets/logo.svg'
-import AvatarBadge from './AvatarBadge'
 
 export default function Header() {
   return (
