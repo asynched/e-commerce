@@ -12,7 +12,7 @@ export default function CartProduct({
   return (
     <div>
       <div className="mb-4 flex gap-4">
-        <img className="bg-purple-600 w-20 h-20" src={image} alt={title} />
+        <img className="bg-purple-600 w-16 h-16" src={image} alt={title} />
         <div className="flex flex-1 justify-between">
           <p className="text-lg">
             <b>{title}</b>

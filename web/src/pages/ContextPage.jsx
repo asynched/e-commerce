@@ -44,15 +44,9 @@ function NameHeading() {
 function NameInput() {
   const { state, setState } = useContext(Context)
 
-  return (
-    <input
-      type="text"
-      value={state.name}
-      onChange={e =>
-        setState(s => {
-          return { ...s, name: e.target.value }
-        })
-      }
-    />
-  )
+  const setName = e => {
+    setState(state => ({ ...state, name: e.target.value }))
+  }
+
+  return <input type="text" value={state.name} onChange={setName} />
 }

@@ -4,7 +4,7 @@ import { ShoppingBagIcon, HeartIcon } from '@heroicons/react/outline'
 import AvatarBadge from '@components/common/AvatarBadge'
 import Logo from '@assets/logo.svg'
 
-export default function Header() {
+export default function Header({ toggleCart }) {
   return (
     <header className="sticky top-0 z-10 p-4 flex items-center justify-between border-b bg-white">
       <div className="flex items-center gap-4">
@@ -21,7 +21,9 @@ export default function Header() {
         />
       </div>
       <div className="flex gap-4">
-        <ShoppingBagIcon className="h-6 w-6" />
+        <button onClick={toggleCart}>
+          <ShoppingBagIcon className="h-6 w-6" />
+        </button>
         <HeartIcon className="h-6 w-6" />
         <AvatarBadge />
       </div>
