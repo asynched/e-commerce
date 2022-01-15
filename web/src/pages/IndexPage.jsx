@@ -1,13 +1,13 @@
-import React from 'react'
-
 import Header from '@components/ui/Header'
 import ProductGrid from '@components/product/ProductGrid'
 import ProductSlider from '@components/product/ProductSlider'
 import Hero from '@components/ui/Hero'
+import Cart from '@components/cart/Cart'
 
 export default function IndexPage() {
   return (
     <main>
+      <Cart />
       <Header />
       <ProductGrid />
       <ProductSlider />
