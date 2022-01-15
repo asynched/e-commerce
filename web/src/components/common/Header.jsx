@@ -7,7 +7,7 @@ import AvatarBadge from './AvatarBadge'
 
 export default function Header() {
   return (
-    <header className="p-4 flex items-center justify-between border-b">
+    <header className="sticky top-0 z-10 p-4 flex items-center justify-between border-b bg-white">
       <div className="flex items-center gap-4">
         <img src={Logo} alt="Logo" />
         <Link to="/">All</Link>
